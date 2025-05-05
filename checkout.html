@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css" />
+    <script defer src="checkout.js"></script>
+</head>
+<body>
+    <!-- Checkout Page -->
+<div id="checkout-page" class="checkout-page">
+    <h2>CHECKOUT</h2>
+    <form id="checkout-form">
+      <!-- User Details Section -->
+      <div class="form-section">
+        <h3>USER DETAILS</h3>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+      </div>
+  
+      <!-- Shipping Address Section -->
+      <div class="form-section">
+        <h3>SHIPPING ADDRESS</h3>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required placeholder="Enter your shipping address"></textarea>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required placeholder="Enter your city" />
+        
+        <label for="zipcode">Zipcode:</label>
+        <input type="text" id="zipcode" name="zipcode" required placeholder="Enter your zipcode" />
+      </div>
+  
+      <!-- Payment Method Section -->
+      <div class="form-section">
+        <h3>PAYMENT METHOD</h3>
+        <label for="payment-method">Choose Payment Method:</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="credit-card">Credit/Debit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="cod">Cash on Delivery</option>
+        </select>
+  
+        <div id="credit-card-details" style="display: none;">
+          <label for="card-number">Card Number:</label>
+          <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" />
+          
+          <label for="expiry-date">Expiry Date:</label>
+          <input type="month" id="expiry-date" name="expiry-date" />
+          
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" placeholder="Enter your CVV" />
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <button onclick="placeOrder()">Place Order</button>
+    </form>
+  </div>
+  
+  <script>
+    // Example cart data - you should replace this with actual cart items
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    document.getElementById("checkout-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const name = document.getElementById("name").value;
+      const address = document.getElementById("address").value;
+      const phone = document.getElementById("phone").value;
+      const paymentMethod = document.getElementById("payment-method").value;
+  
+      const totalAmount = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  
+      const orderData = {
+        name,
+        address,
+        phone,
+        paymentMethod,
+        items: cartItems,
+        total: totalAmount
+      };
+  
+      localStorage.setItem("orderData", JSON.stringify(orderData));
+  
+      // Clear the cart after placing order (optional)
+      localStorage.removeItem("cart");
+  
+      // Redirect to confirmation page
+      window.location.href = "confirmation.html";
+    });
+  </script>
+   
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - The Menses Friend</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link your main CSS file -->
+</head>
+<body>
+
+  <!-- Contact Us Section -->
+  <section id="contact-us" class="contact-us-section">
+    <div class="contact-us-container">
+      
+      <!-- Left Section - Image -->
+      <div class="contact-us-left">
+        <img src="images/contact.png" alt="Contact Us">
+      </div>
+
+      <!-- Right Section - Contact Form -->
+      <div class="contact-us-right">
+        <h2>Contact Us</h2>
+        <p>We're here to help! Please feel free to reach out to us with any questions or concerns you may have.</p>
+        
+        <!-- Contact Form -->
+        <form class="contact-us-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Your Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write Your Message Here" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional Footer or Other Sections Here -->
+
+  <!-- Link to your JS file for form submission handling -->
+  <script src="scripts.js"></script>
+
+</body>
+</html>

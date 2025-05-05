@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Page</title>
+  <link rel="stylesheet" href="stylessss.css" />
+  <script defer src="scriptssss.js"></script>
+</head>
+<body>
+
+  <!-- Cart Icon in the top-right corner -->
+<div id="cart-icon" class="cart-icon" onclick="showCartSidebar()">
+    🛒 <span id="cart-item-count">0</span>
+  </div>
+
+
+  <div class="product-container">
+    <div class="product-image">
+      <img src="images/vending.png.jpg" alt="Vending Machine" />
+    </div>
+
+    <div class="product-details">
+      <h1>Vending Machine</h1>
+      <div class="ratings">
+        ★★★★☆ <span>(2 customer reviews)</span>
+      </div>
+      <div class="price">₹3,599</div>
+      <p class="description">
+        Dispenses sanitary pads using a coin/tap mechanism.<br>
+        ➤ Easy installation<br>
+        ➤ Durable and compact<br>
+        ➤ User-friendly and affordable
+      </p>
+
+      <div class="options">
+        <label for="color">Color:</label>
+        <select id="color" name="color">
+          <option>Red</option>
+          <option>White</option>
+          <option>Black</option>
+          <option>Green</option>
+          <option>Pink</option>
+          <option>Grey</option>
+          <option>Brown</option>
+          <option>Purple</option>
+          <option>Blue</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" />
+      </div>
+
+      <div class="actions">
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-wishlist">Add to Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="product-container">
+    <div class="product-image">
+      <img src="images/disposal.png.jpeg" alt="Disposal Machine" />
+    </div>
+
+    <div class="product-details">
+      <h1>Disposal Machine</h1>
+      <div class="ratings">
+        ★★★★★ <span>(4 customer reviews)</span>
+      </div>
+      <div class="price">₹4,999</div>
+      <p class="description">
+        Eco-friendly sanitary pad disposal machine with high-temperature incineration technology.<br>
+        ➤ Burns used pads hygienically and safely<br>
+        ➤ Emits zero visible smoke and odor<br>
+        ➤ Compact, durable and easy to install<br>
+        ➤ Ideal for schools, colleges, offices, and public places
+      </p>
+
+      <div class="options">
+        <label for="color">Color:</label>
+        <select id="color" name="color">
+          <option>Red</option>
+          <option>White</option>
+          <option>Black</option>
+          <option>Green</option>
+          <option>Pink</option>
+          <option>Grey</option>
+          <option>Brown</option>
+          <option>Purple</option>
+          <option>Blue</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" />
+      </div>
+
+      <div class="actions">
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-wishlist">Add to Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="product-container">
+    <div class="product-image">
+      <img src="images/combined.png.jpeg" alt="Vending + Disposal combo Machine" />
+    </div>
+
+    <div class="product-details">
+      <h1>Vending + Disposal Combo Machine</h1>
+      <div class="ratings">
+        ★★★★★ <span>(4 customer reviews)</span>
+      </div>
+      <div class="price">₹12,999</div>
+      <p class="description">
+            Dual-function machine combining vending and disposal in one smart solution.<br>
+            ➤ Dispenses pads on coin or tap mechanism<br>
+            ➤ Burns used pads with 100% emission control<br>
+            ➤ Space-saving and cost-effective<br>
+            ➤ Ensures complete menstrual hygiene management
+          </p>
+    
+      <div class="options">
+        <label for="color">Color:</label>
+        <select id="color" name="color">
+          <option>Red</option>
+          <option>White</option>
+          <option>Black</option>
+          <option>Green</option>
+          <option>Pink</option>
+          <option>Grey</option>
+          <option>Brown</option>
+          <option>Purple</option>
+          <option>Blue</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" />
+      </div>
+
+      <div class="actions">
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-wishlist">Add to Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+
+  
+  
+  <!-- Cart Sidebar (hidden by default) -->
+  <div id="cart-sidebar" class="cart-sidebar">
+    <h2>Your Cart</h2>
+    <ul id="cart-items-list"></ul>
+  
+    <!-- Cart Summary -->
+    <div id="cart-summary">
+      <p>Total Items: <span id="total-items">0</span></p>
+      <p>Total Price: ₹<span id="total-price">0</span></p>
+      <button onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+    </div>
+  </div>
+  
+  
+  <!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 Menses Friend. All rights reserved.</p>
+  </footer>
+  
+ 
+
+</body>
+</html>
